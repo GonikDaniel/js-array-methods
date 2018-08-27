@@ -1,0 +1,56 @@
+{
+  "name": "js-array-methods",
+  "description": "Netology. JS array methods.",
+  "version": "2.6.2",
+  "author": {
+    "name": "Gonik Daniel",
+    "url": "https://github.com/GonikDaniel"
+  },
+  "homepage": "https://netology-js-array-methods.netlify.com/",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/GonikDaniel/js-array-methods"
+  },
+  "bugs": {
+    "url": "https://github.com/GonikDaniel/js-array-methods/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "shower",
+    "presentation",
+    "netology",
+    "js",
+    "arrays"
+  ],
+  "files": [
+    "pictures/**",
+    "index.html",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "dependencies": {
+    "shower-core": "^2.1.0",
+    "shower-material": "^2.1.2",
+    "shower-ribbon": "^3.1.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "del": "^3.0.0",
+    "gh-pages": "^1.2.0",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-zip": "^4.0.0",
+    "merge-stream": "^1.0.0",
+    "path-exists-cli": "^1.0.0",
+    "shower-cli": "^0.1.4"
+  },
+  "scripts": {
+    "pdf": "shower pdf",
+    "start": "gulp serve",
+    "prepare": "gulp prepare",
+    "archive": "gulp archive",
+    "publish": "gulp publish",
+    "test": "npm run prepare && ls prepared && npm run archive && path-exists archive.zip"
+  }
+}
