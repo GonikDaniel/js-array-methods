@@ -2,29 +2,307 @@
 <html lang="en">
 
 <head>
-    <title>Нетология. 10 методов массивов, о которых вы должны знать в JavaScript</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="node_modules/shower-ribbon/styles/styles.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
+  <title>Нетология. 10 методов массивов, о которых вы должны знать в JavaScript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/shower-ribbon/styles/styles.css">
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
 
-    </style>
+    img.snippet {
+      width: 825px;
+      height: 300px;
+    }
+
+    #caniuse {
+      background: #f2e8d5;
+    }
+
+    #caniuse img {
+      margin: 60px 0;
+      width: 950px;
+    }
+
+    table.summary {
+      font-size: 18px;
+      line-height: 40px;
+    }
+
+    table.summary .col {
+      text-align: center;
+    }
+
+    table.summary .value {
+      font-weight: 100;
+    }
+  </style>
 </head>
 
 <body class="shower list">
 
-    <header class="caption">
-        <h1>10 методов массивов, о которых вы должны знать в JavaScript</h1>
-        <p>Нетология. Гоник Даниил</p>
-    </header>
+  <header class="caption">
+    <h1>10 методов массивов, о которых вы должны знать в JavaScript</h1>
+    <p>Нетология. Гоник Даниил</p>
+  </header>
 
-    <div class="progress"></div>
+  <section class="slide" id="cover">
+    <h2>Массивы в</h2>
+    <figure>
+        <img class="cover" src="pictures/js.png" alt="JS awesome" height="100%">
+    </figure>
+    <style>
+      #cover h2 {
+        margin: 30px 0 0;
+        color: white;
+        text-align: center;
+        font-size: 70px;
+      }
+    </style>
+  </section>
 
-    <script src="node_modules/shower-core/shower.min.js"></script>
-    <!-- Copyright © 2018 Gonik Daniel. -->
+  <section class="slide">
+    <h2>Agenda</h2>
+    <ol style="font-size: 35px">
+      <li class="next">Те самые методы</li>
+      <li class="next">Источники мудрости</li>
+      <li class="next">To be or not to be</li>
+      <li class="next">Perf</li>
+      <li class="next">Песочница</li>
+    </ol>
+  </section>
+
+  <section class="slide" id="picture">
+    <h2>Работа с массивами в JS</h2>
+    <figure>
+      <img class="cover" src="pictures/juggler.gif" alt="juggler">
+    </figure>
+    <style>
+      #picture h2 {
+        color: #e74c3c;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 400px;
+      }
+    </style>
+  </section>
+
+  <section class="slide" id="42">
+    <img class="cover" src="pictures/rodina-mother.jpg" alt="Мать">
+  </section>
+
+  <section class="slide">
+    <h2>map</h2>
+    <p class="note" style="font-size: 24px;">
+      This method create new array by calling the provided function in every element.
+    </p>
+    <img class="snippet" src="pictures/snippets/map.png" alt="Сниппет кода с методом map">
+  </section>
+
+  <section class="slide">
+    <h2>forEach</h2>
+    <p class="note">This method can help you to loop over array's items.</p>
+    <img class="snippet" src="pictures/snippets/forEach.png" alt="Сниппет кода с методом forEach">
+  </section>
+
+  <section class="slide">
+    <h2>sort</h2>
+    <p class="note" style="font-size: 22px;">
+      This method used to arrange/sort array's item either ascending or descending order.
+    </p>
+    <img class="snippet" src="pictures/snippets/sort.png" alt="Сниппет кода с методом sort">
+  </section>
+
+  <section class="slide">
+    <h2>filter</h2>
+    <p class="note" style="font-size: 18px;">
+      This method create new array with only elements passed condition inside the provided function.
+      Let's filter item(s) greater than 3.
+    </p>
+    <img class="snippet" src="pictures/snippets/filter.png" alt="Сниппет кода с методом filter">
+  </section>
+
+  <section class="slide">
+    <h2>reduce</h2>
+    <p class="note quote" style="font-size: 18px;">
+      The reduce() method applies a function against an accumulator and each element in the array
+      (from left to right) to reduce it to a single value - MDN
+    </p>
+    <img class="snippet" src="pictures/snippets/reduce.png" alt="Сниппет кода с методом reduce">
+  </section>
+
+  <section class="slide">
+    <h2>includes</h2>
+    <p class="note">This method check if array includes the item passed in the method.</p>
+    <img class="snippet" src="pictures/snippets/includes.png" alt="Сниппет кода с методом includes">
+  </section>
+
+  <section class="slide">
+    <h2>some</h2>
+    <p class="note" style="font-size: 18px;">
+      This method check if at least one of array's item passed the condition. If passed, it return 'true' otherwise 'false'.
+    </p>
+    <img class="snippet" src="pictures/snippets/some.png" alt="Сниппет кода с методом some">
+  </section>
+
+  <section class="slide">
+    <h2>every</h2>
+    <p class="note" style="font-size: 18px;">
+      This method check if all array's item passed the condition. If passed, it return 'true' otherwise 'false'.
+    </p>
+    <img class="snippet" src="pictures/snippets/every.png" alt="Сниппет кода с методом every">
+  </section>
+
+  <section class="slide">
+    <h2>Array.from</h2>
+    <p class="note" style="font-size: 18px;">
+      This change all thing that are array-like or iterable into true array especially when working with DOM,
+      so that you can use other array methods like reduce, map, filter and so on.
+    </p>
+    <img class="snippet" src="pictures/snippets/Array.from.png" alt="Сниппет кода с методом Array.from">
+  </section>
+
+  <section class="slide">
+    <h2>Array.of</h2>
+    <p class="note">
+      This create array from every arguments passed into it.
+    </p>
+    <img class="snippet" src="pictures/snippets/Array.of.png" alt="Сниппет кода с методом Array.of">
+  </section>
+
+  <section class="slide">
+    <h2>Источники мудрости</h2>
+    <ul>
+      <li class="next">
+        <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript">MDN</a>, вечный источник мудрости
+      </li>
+      <li class="next">
+        <a href="https://caniuse.com/">Caniuse.com</a>, проверь себя
+      </li>
+      <li class="next">
+        <a href="https://stackoverflow.com/questions/tagged/javascript">Stackoverflow</a>, ответы на все твои вопросы
+      </li>
+      <li class="next">
+        <a href="https://learn.javascript.ru/array">Массивы с числовыми индексами</a>, Илья Кантор
+      </li>
+    </ul>
+  </section>
+
+  <section class="slide white" id="caniuse">
+    <h2>ES5 support</h2>
+    <img class="place next" src="pictures/caniuse/es5.png" alt="Can I Use saying YES">
+  </section>
+
+  <section class="slide white" id="caniuse">
+    <h2>includes support</h2>
+    <img class="place next" src="pictures/caniuse/includes.png" alt="Can I Use saying NOT SURE">
+  </section>
+
+  <section class="slide white" id="caniuse">
+    <h2>Array.from / Array.of support</h2>
+    <img class="place next" src="pictures/caniuse/Array.from.png" alt="Can I Use saying NOT SURE">
+  </section>
+
+  <section class="slide">
+    <h2>Сводная таблица</h2>
+    <table class="summary">
+      <tr>
+        <th scope="col">Метод</th>
+        <th class="col">map</th>
+        <th class="col">forEach</th>
+        <th class="col">sort</th>
+        <th class="col">filter</th>
+        <th class="col">reduce</th>
+        <th class="col">includes</th>
+        <th class="col">some</th>
+        <th class="col">every</th>
+        <th class="col">Array.from</th>
+      </tr>
+      <tr>
+        <th scope="row">Мутирует</th>
+        <th class="col value">нет</th>
+        <th class="col value">нет</th>
+        <th class="col value">да</th>
+        <th class="col value">нет</th>
+        <th class="col value">нет</th>
+        <th class="col value">нет</th>
+        <th class="col value">нет</th>
+        <th class="col value">нет</th>
+        <th class="col value">нет</th>
+      </tr>
+      <tr>
+        <th scope="row">Возвращает</th>
+        <th class="col value">[]</th>
+        <th class="col value">undefined</th>
+        <th class="col value">[]</th>
+        <th class="col value">[]</th>
+        <th class="col value">any</th>
+        <th class="col value">boolean</th>
+        <th class="col value">boolean</th>
+        <th class="col value">boolean</th>
+        <th class="col value">[]</th>
+      </tr>
+      <tr>
+        <th scope="row">Static/instance</th>
+        <th class="col value">instance</th>
+        <th class="col value">instance</th>
+        <th class="col value">instance</th>
+        <th class="col value">instance</th>
+        <th class="col value">instance</th>
+        <th class="col value">instance</th>
+        <th class="col value">instance</th>
+        <th class="col value">instance</th>
+        <th class="col value">static</th>
+      </tr>
+    </table>
+  </section>
+
+  <section class="slide">
+    <h2>Performance</h2>
+    <ol style="font-size: 35px">
+      <li class="next">Сложность алгоритмов и цикломатическая сложность</li>
+      <li class="next">Tools</li>
+      <li class="next">Здравый смысл</li>
+    </ol>
+  </section>
+
+  <section class="slide black">
+    <figure>
+      <img class="cover" src="pictures/bsod.png" alt="Экран ошибки Windows" style="max-height: initial;">
+    </figure>
+  </section>
+
+  <section class="slide white" style="background: #2ccc9f">
+    <img class="place" width="820" src="pictures/sugarss.svg" alt="Лого SugarSS">
+    <img class="place left" width="280" src="pictures/sugarss.svg" alt="Лого SugarSS">
+    <img class="place right" width="280" src="pictures/sugarss.svg" alt="Лого SugarSS">
+    <div class="snow"></div>
+    <style>
+      .snow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url(pictures/snow.gif) center / cover;
+        image-rendering: pixelated;
+      }
+    </style>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout shrink">Спасибо за внимание</h2>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout">Вопросы?</h2>
+  </section>
+
+  <div class="progress"></div>
+
+  <script src="node_modules/shower-core/shower.min.js"></script>
+  <!-- Copyright © 2018 Gonik Daniel. -->
 
 </body>
 
