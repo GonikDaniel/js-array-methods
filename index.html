@@ -50,7 +50,7 @@
   <section class="slide" id="cover">
     <h2>Массивы в</h2>
     <figure>
-        <img class="cover" src="pictures/js.png" alt="JS awesome" height="100%">
+      <img class="cover" src="pictures/js.png" alt="JS awesome" height="100%">
     </figure>
     <style>
       #cover h2 {
@@ -94,22 +94,24 @@
 
   <section class="slide">
     <h2>map</h2>
-    <p class="note" style="font-size: 24px;">
-      This method create new array by calling the provided function in every element.
+    <p class="note" style="font-size: 18px;">
+      Создает новый массив, вызывая коллбэк для каждого элемента изначального массива.
     </p>
     <img class="snippet" src="pictures/snippets/map.png" alt="Сниппет кода с методом map">
   </section>
 
   <section class="slide">
     <h2>forEach</h2>
-    <p class="note">This method can help you to loop over array's items.</p>
+    <p class="note" style="font-size: 18px;">
+      Этот метод может быть полезен для итерации по всем элементам массива.
+    </p>
     <img class="snippet" src="pictures/snippets/forEach.png" alt="Сниппет кода с методом forEach">
   </section>
 
   <section class="slide">
     <h2>sort</h2>
-    <p class="note" style="font-size: 22px;">
-      This method used to arrange/sort array's item either ascending or descending order.
+    <p class="note" style="font-size: 18px;">
+      Название метода само за себя говорит.
     </p>
     <img class="snippet" src="pictures/snippets/sort.png" alt="Сниппет кода с методом sort">
   </section>
@@ -117,31 +119,33 @@
   <section class="slide">
     <h2>filter</h2>
     <p class="note" style="font-size: 18px;">
-      This method create new array with only elements passed condition inside the provided function.
-      Let's filter item(s) greater than 3.
+      Создает новый массив только из тех элементов, которые прошли проверку.
+      Давайте отфильтруем числа, которые больше 3
     </p>
     <img class="snippet" src="pictures/snippets/filter.png" alt="Сниппет кода с методом filter">
   </section>
 
   <section class="slide">
     <h2>reduce</h2>
-    <p class="note quote" style="font-size: 18px;">
+    <blockquote class="note" style="font-size: 18px;">
       The reduce() method applies a function against an accumulator and each element in the array
-      (from left to right) to reduce it to a single value - MDN
-    </p>
+      (from left to right) to reduce it to a single value (MDN)
+    </blockquote>
     <img class="snippet" src="pictures/snippets/reduce.png" alt="Сниппет кода с методом reduce">
   </section>
 
   <section class="slide">
     <h2>includes</h2>
-    <p class="note">This method check if array includes the item passed in the method.</p>
+    <p class="note" style="font-size: 18px;">
+      Проверяет содержит ли массив заданное значение. Возвращает boolean
+    </p>
     <img class="snippet" src="pictures/snippets/includes.png" alt="Сниппет кода с методом includes">
   </section>
 
   <section class="slide">
     <h2>some</h2>
     <p class="note" style="font-size: 18px;">
-      This method check if at least one of array's item passed the condition. If passed, it return 'true' otherwise 'false'.
+      Проверяет, что хотя бы один элемент массива проходит проверку. Возвращает boolean
     </p>
     <img class="snippet" src="pictures/snippets/some.png" alt="Сниппет кода с методом some">
   </section>
@@ -149,7 +153,7 @@
   <section class="slide">
     <h2>every</h2>
     <p class="note" style="font-size: 18px;">
-      This method check if all array's item passed the condition. If passed, it return 'true' otherwise 'false'.
+      Проверяет, что все элементы массива проходят проверку. Возвращает boolean
     </p>
     <img class="snippet" src="pictures/snippets/every.png" alt="Сниппет кода с методом every">
   </section>
@@ -157,18 +161,41 @@
   <section class="slide">
     <h2>Array.from</h2>
     <p class="note" style="font-size: 18px;">
-      This change all thing that are array-like or iterable into true array especially when working with DOM,
-      so that you can use other array methods like reduce, map, filter and so on.
+      Приводит любую массивоподобную структуру данных к настоящему массиву,
+      чтобы была возможность полноценно использовать все методы массивов. Особенно полезно при работе с DOM
     </p>
     <img class="snippet" src="pictures/snippets/Array.from.png" alt="Сниппет кода с методом Array.from">
   </section>
 
   <section class="slide">
     <h2>Array.of</h2>
-    <p class="note">
-      This create array from every arguments passed into it.
+    <p class="note" style="font-size: 18px;">
+      Cоздаёт новый экземпляр массива из произвольного числа аргументов, вне зависимости от числа или типа аргумента.
     </p>
     <img class="snippet" src="pictures/snippets/Array.of.png" alt="Сниппет кода с методом Array.of">
+  </section>
+
+  <section class="slide">
+    <h2>Еще немного методов...</h2>
+    <p class="note">
+      Ну и, конечно же, не забывайте, что вы можете добавлять и свои методы.
+    </p>
+    <img class="snippet" src="pictures/snippets/all-methods.png" alt="Все методы массивов">
+  </section>
+
+  <section class="slide white" id="caniuse">
+    <h2>ES5 support</h2>
+    <img class="place next" src="pictures/caniuse/es5.png" alt="Can I Use saying YES">
+  </section>
+
+  <section class="slide white" id="caniuse">
+    <h2>ES6 (Array.from / Array.of) support</h2>
+    <img class="place next" src="pictures/caniuse/Array.from.png" alt="Can I Use saying NOT SURE">
+  </section>
+
+  <section class="slide white" id="caniuse">
+    <h2>ES7 (includes) support</h2>
+    <img class="place next" src="pictures/caniuse/includes.png" alt="Can I Use saying NOT SURE">
   </section>
 
   <section class="slide">
@@ -187,21 +214,6 @@
         <a href="https://learn.javascript.ru/array">Массивы с числовыми индексами</a>, Илья Кантор
       </li>
     </ul>
-  </section>
-
-  <section class="slide white" id="caniuse">
-    <h2>ES5 support</h2>
-    <img class="place next" src="pictures/caniuse/es5.png" alt="Can I Use saying YES">
-  </section>
-
-  <section class="slide white" id="caniuse">
-    <h2>includes support</h2>
-    <img class="place next" src="pictures/caniuse/includes.png" alt="Can I Use saying NOT SURE">
-  </section>
-
-  <section class="slide white" id="caniuse">
-    <h2>Array.from / Array.of support</h2>
-    <img class="place next" src="pictures/caniuse/Array.from.png" alt="Can I Use saying NOT SURE">
   </section>
 
   <section class="slide">
@@ -244,16 +256,16 @@
         <th class="col value">[]</th>
       </tr>
       <tr>
-        <th scope="row">Static/instance</th>
-        <th class="col value">instance</th>
-        <th class="col value">instance</th>
-        <th class="col value">instance</th>
-        <th class="col value">instance</th>
-        <th class="col value">instance</th>
-        <th class="col value">instance</th>
-        <th class="col value">instance</th>
-        <th class="col value">instance</th>
-        <th class="col value">static</th>
+        <th scope="row">Стандарт</th>
+        <th class="col value">ES5</th>
+        <th class="col value">ES5</th>
+        <th class="col value">sort</th>
+        <th class="col value">ES5</th>
+        <th class="col value">ES5</th>
+        <th class="col value">ES7/ES2016</th>
+        <th class="col value">ES5</th>
+        <th class="col value">ES5</th>
+        <th class="col value">ES6/ES2015</th>
       </tr>
     </table>
   </section>
@@ -265,6 +277,58 @@
       <li class="next">Tools</li>
       <li class="next">Здравый смысл</li>
     </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Цикломатическая сложность</h2>
+    <figure>
+      <blockquote>
+        <p>
+          Цикломатическая сложность измеряет количество линейно независимых путей в методе,
+          которое определяется числом и сложностью условных ветвей.
+          Низкой цикломатической сложностью, как правило, отличаются методы, которые просты для понимания, проверки и поддержки.
+        </p>
+      </blockquote>
+      <figcaption>
+        <a href="https://msdn.microsoft.com/ru-ru/library/ms182212.aspx" target="_blank">MSDN</a>
+      </figcaption>
+  </section>
+
+  <section class="slide">
+		<h2>Tools</h2>
+		<ol>
+      <li class="next">вкладка performance</li>
+      <li class="next">jsperf</li>
+      <li class="next">console.time/timeEnd</li>
+      <li class="next">performance.now</li>
+      <li class="next">performance.memory</li>
+      <li class="next">performance.timing</li>
+		</ol>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout shrink">Здравый смысл</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Где и как можно поиграться с массивами</h2>
+    <ul>
+      <li class="next">
+        <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript" target="_blank">Сodewars</a>, programming challenges
+      </li>
+      <li class="next">
+        <a href="http://reactivex.io/learnrx/" target="_blank">Functional Programming in JS (RxJS)</a>
+      </li>
+      <li class="next">
+        <a href="https://learn.javascript.ru/array" target="_blank">Массивы с числовыми индексами</a>, learn.javascript.ru
+      </li>
+      <li class="next">
+        <a href="https://learn.javascript.ru/array-methods" target="_blank">Массивы: методы</a>, learn.javascript.ru
+      </li>
+      <li class="next">
+        <a href="https://learn.javascript.ru/array-iteration" target="_blank">Массивы: перебирающие методы</a>, learn.javascript.ru
+      </li>
+    </ul>
   </section>
 
   <section class="slide black">
